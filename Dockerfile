@@ -2,6 +2,18 @@ FROM quay.io/ukhomeofficedigital/docker-centos-base
 
 ENV MEDIAWIKI_VERSION 1.25.2
 
+# Install PHP-FPM and libs
+RUN yum update -y && \
+    yum install -y  \
+      php-fpm \
+      php-mbstring \
+      php-mysql  \
+      php-gd \
+      php-xml \
+      php-intl \
+      php-pecl-zendopcache && \
+    yum -y clean all
+
 # Install nginx.
 RUN yum update -y && \
     yum install -y \ 
