@@ -1,5 +1,7 @@
 # docker-mediawiki
 
+[![Build Status](https://travis-ci.org/UKHomeOffice/docker-mediawiki.svg?branch=master)](https://travis-ci.org/UKHomeOffice/docker-mediawiki)
+
 For this to work, PHP will be running in another container separate to mediawiki
 This will be handled currently as a sidekick container in a pod for Kubernetes, but also could be
 just a bound container also.
